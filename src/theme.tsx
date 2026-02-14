@@ -1,4 +1,4 @@
-import {createSystem, defaultConfig} from '@chakra-ui/react';
+import {createSystem, defaultConfig, defineRecipe} from '@chakra-ui/react';
 
 const fontSizes = {
   heading: {
@@ -23,6 +23,47 @@ const fontWeights = {
     alternative: 500,
   },
 };
+
+const buttonRecipe = defineRecipe({
+  className: 'chakra-button',
+  variants: {
+    variant: {
+      primary: {
+        borderRadius: 'full',
+        py: '1.5',
+        px: '5',
+        bg: 'fill-brand',
+        color: 'text-white',
+        fontSize: 'text.small',
+        _hover: {
+          bg: 'fill-brand-hover',
+        },
+      },
+      secondary: {
+        borderRadius: 'full',
+        py: '1.5',
+        px: '5',
+        bg: 'fill-gray',
+        color: 'text-primary',
+        fontSize: 'text.small',
+        _hover: {
+          bg: 'fill-gray-hover',
+        },
+      },
+      ghost: {
+        borderRadius: 'full',
+        py: '1.5',
+        px: '5',
+        bg: 'none',
+        color: 'text-primary',
+        fontSize: 'text.small',
+        _hover: {
+          bg: 'fill-gray',
+        },
+      },
+    },
+  },
+});
 
 const theme = createSystem(defaultConfig, {
   theme: {
@@ -61,16 +102,7 @@ const theme = createSystem(defaultConfig, {
         'text.alternative': {value: fontWeights.text.alternative},
       },
     },
-    recipes: {
-      button: {
-        base: {
-          bg: 'unset',
-          backgroundColor: '#0F62FE',
-          color: '#FFFFFF',
-          borderRadius: '100px',
-        },
-      },
-    },
+    recipes: {button: buttonRecipe},
   },
 });
 

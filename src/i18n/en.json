@@ -1,6 +1,24 @@
 {
+  "validation.required": "{{field}} is required",
+  "validation.minLength": "{{field}} must be at least {{min}} characters",
+  "validation.passwordMatch": "Passwords must match",
+  "error.invalidCredentials": "Invalid username or password",
+  "error.generic": "Something went wrong. Please try again.",
   "app.title": "Carvago Frontend Assignment",
   "app.description": "Assignment in React.js for developers who want to join our team.",
-  "welcome.message": "Welcome to Carvago Front-End Assignment",
-  "welcome.link": "see API docs"
+  "signIn.title": "It's good to have you back!",
+  "signIn.description": "Welcome to our secure portal! To access the full functionality of our app, kindly provide your credentials below. Your privacy is our priority.",
+  "signIn.username": "Username",
+  "signIn.password": "Password",
+  "signIn.submit": "Log in",
+  "signIn.noAccount": "Don't have an account?",
+  "signIn.signUpLink": "Sign up",
+  "signUp.title": "Create your account",
+  "signUp.description": "Join us today! Fill in the details below to create your account and get started.",
+  "signUp.username": "Username",
+  "signUp.password": "Password",
+  "signUp.confirmPassword": "Confirm password",
+  "signUp.submit": "Sign up",
+  "signUp.hasAccount": "Already have an account?",
+  "signUp.signInLink": "Sign in"
 }

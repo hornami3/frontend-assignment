@@ -25,14 +25,8 @@ const GlobalStyle = createGlobalStyle`
    figure, figcaption, footer, header, hgroup,
    menu, nav, output, ruby, section, summary,
    time, mark, audio, video {
-     margin: 0;
-     padding: 0;
-     border: 0;
-     font-size: 100%;
      font: inherit;
      vertical-align: baseline;
-     background-color: #E5E5E5;
-     color: #091E42;
    }
    html, body, #root{
     height: 100%;
