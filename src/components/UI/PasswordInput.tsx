@@ -1,6 +1,4 @@
-import {useRef} from 'react';
-import type {ReactNode, Ref} from 'react';
-import type {ButtonProps, GroupProps, InputProps as ChakraInputProps} from '@chakra-ui/react';
+import {useRef, type ReactNode, type Ref} from 'react';
 import {
   Box,
   Field,
@@ -9,6 +7,9 @@ import {
   InputGroup,
   mergeRefs,
   useControllableState,
+  type ButtonProps,
+  type GroupProps,
+  type InputProps as ChakraInputProps,
 } from '@chakra-ui/react';
 import {LuEye, LuEyeOff} from 'react-icons/lu';
 
@@ -110,7 +111,6 @@ const VisibilityTrigger = ({ref, ...props}: ButtonProps & {ref?: Ref<HTMLButtonE
     _hover={{bg: 'fill-gray-lightest'}}
     _active={{bg: 'fill-gray-lightest'}}
     height="calc(100% - {spacing.2})"
-    aria-label="Toggle password visibility"
     {...props}
   />
 );

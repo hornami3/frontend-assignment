@@ -43,7 +43,6 @@ export const SignIn = () => {
       localStorage.setItem('refreshToken', result.refreshToken);
       navigate('/overview');
     } catch (err) {
-      console.log('ERROR:', err);
       const message =
         err && typeof err === 'object' && 'status' in err && err.status === 401
           ? t('error.invalidCredentials')
@@ -53,15 +52,7 @@ export const SignIn = () => {
   });
 
   return (
-    <Flex
-      minH="100vh"
-      align="center"
-      justify="center"
-      bg="fill-gray"
-      direction="column"
-      gap="6"
-      px="4"
-    >
+    <Flex minH="100vh" align="center" justify="center" direction="column" gap="6" px="4">
       <Box bg="fill-white" borderRadius="2xl" p="6" w="full" maxW="500px" sm={{p: 10}}>
         <form onSubmit={onSubmit}>
           <Flex direction="column" gap="6">

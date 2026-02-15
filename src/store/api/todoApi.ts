@@ -29,11 +29,12 @@ export const todoApi = createApi({
       }),
       invalidatesTags: [{type: 'Todo', id: 'LIST'}],
     }),
-    updateTodo: builder.mutation<Todo, {id: string} & UpdateTodoRequest>({
+    updateTodo: builder.mutation<void, {id: string} & UpdateTodoRequest>({
       query: ({id, ...body}) => ({
         url: `/todo/${id}`,
         method: 'PUT',
         body,
+        responseHandler: 'text',
       }),
       invalidatesTags: (_result, _error, {id}) => [
         {type: 'Todo', id},
@@ -51,6 +52,7 @@ export const todoApi = createApi({
       query: (id) => ({
         url: `/todo/${id}/complete`,
         method: 'POST',
+        responseHandler: 'text',
       }),
       invalidatesTags: (_result, _error, id) => [
         {type: 'Todo', id},
@@ -61,6 +63,7 @@ export const todoApi = createApi({
       query: (id) => ({
         url: `/todo/${id}/incomplete`,
         method: 'POST',
+        responseHandler: 'text',
       }),
       invalidatesTags: (_result, _error, id) => [
         {type: 'Todo', id},

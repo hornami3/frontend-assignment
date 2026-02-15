@@ -66,6 +66,11 @@ const buttonRecipe = defineRecipe({
 });
 
 const theme = createSystem(defaultConfig, {
+  globalCss: {
+    body: {
+      bg: 'fill-gray',
+    },
+  },
   theme: {
     tokens: {
       colors: {

@@ -1,5 +1,9 @@
-import {Box, Input as ChakraInput, type InputProps as ChakraInputProps} from '@chakra-ui/react';
-import {Field} from '@chakra-ui/react';
+import {
+  Field,
+  Box,
+  Input as ChakraInput,
+  type InputProps as ChakraInputProps,
+} from '@chakra-ui/react';
 
 type InputProps = ChakraInputProps & {
   label: string;
@@ -10,9 +14,11 @@ type InputProps = ChakraInputProps & {
 export const TextInput = ({label, errorText, required, ...rest}: InputProps) => (
   <Field.Root invalid={!!errorText}>
     <Field.Label color="text-secondary" fontSize="text.small">
-      <Box as="span" color="text-danger" fontSize="text.base">
-        *
-      </Box>
+      {required && (
+        <Box as="span" color="text-danger" fontSize="text.base">
+          *
+        </Box>
+      )}
       {label}
     </Field.Label>
     <ChakraInput

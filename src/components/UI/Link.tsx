@@ -7,10 +7,8 @@ interface LinkProps {
   children: ReactNode;
 }
 
-export const Link = ({href, children}: LinkProps) => {
-  return (
-    <ChakraLink asChild color="fill-brand" _hover={{color: 'fill-brand-hover'}} fontWeight="medium">
-      <RouterLink to={href}>{children}</RouterLink>
-    </ChakraLink>
-  );
-};
+export const Link = ({href, children}: LinkProps) => (
+  <ChakraLink asChild color="fill-brand" _hover={{color: 'fill-brand-hover'}} fontWeight="medium">
+    <RouterLink to={href}>{children}</RouterLink>
+  </ChakraLink>
+);
